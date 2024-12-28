@@ -16,17 +16,25 @@ Output: A percentage of veteran managers.
 Functionality: This service takes the result from the Manager Microservice and calculates the percentage of male and female managers.
 Input: The list of managers from the Manager Microservice.
 Output: Percentages of male and female managers.
+
 Architecture
 The microservices are designed to be independent, communicating through RESTful APIs. All services are containerized using Docker to ensure portability and scalability.
 
 The workflow is as follows:
 
 Manager Microservice reads the DEI.csv file and extracts the managers.
+
 Veteran Manager Microservice calculates the percentage of veteran managers using the data from the Manager Microservice.
+
 Gender Manager Microservice calculates the gender distribution among the managers using the data from the Manager Microservice.
+
 Technologies Used
+
 Spring Boot: For backend development and API creation.
+
 Docker: For containerizing the microservices and ensuring scalability.
+
 CSV Parsing: For reading and processing the DEI.csv file containing employee data.
+
 RESTful APIs: For communication between the microservices.
 
